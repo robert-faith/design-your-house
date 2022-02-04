@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to make a website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo_ug.png" class="logo">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Bedroom</a>
+                </li>
+                <li>
+                    <a href="#">Dining</a>
+                </li>
+                <li>
+                    <a href="#">Kitchen</a>
+                </li>
+                <li>
+                    <a href="#">Backyard</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>DESIGN YOUR HOUSE</h1>
+            <P> Subcribe Easy tutorials youtube channel to watch more videos, <br>press the bell icon to get latest updates. </P>
+            <div id="object" class="bigEntrance">
+                <button type="button"><span></span>WATCH MORE</button>
+                <button type="button"><span></span>SUBSCRIBE</button>
+            </div>
+            <div id="object" class="bigEntrance">
+                <img src="icon_ug.png" alt="icon_ug" class="pulse icon_1">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        $(window).scroll(function() {
+            $('#object').each(function(){
+            var imagePos = $(this).offset().top;
+    
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+400) {
+                    $(this).addClass("bigEntrance");
+                }
+            });
+        });
+    </script>
+    <script>
+        $('#object').click(function() {
+            $(this).addClass("bigEntrance");
+        });
+    </script>
+</body>
+</html>
